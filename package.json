@@ -1,11 +1,18 @@
 {
-  "name": "storybook-package",
+  "name": "my-storybook-component-library",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "author": "HuyHQ29 <huyhq29@fpt.com.vn>",
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@storybook/addon-docs": "^7.0.7",
     "@storybook/addon-essentials": "^7.0.4",
     "@storybook/addon-interactions": "^7.0.4",
     "@storybook/addon-links": "^7.0.4",
@@ -15,9 +22,14 @@
     "@storybook/react-webpack5": "^7.0.4",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.35",
+    "postcss": "^8.4.21",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "storybook": "^7.0.4",
@@ -29,6 +41,11 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  }
+    "build-storybook": "storybook build",
+    "build": "rollup -c"
+  },
+  "type": "module",
+  "workspaces": [
+    "my-storybook-component-library"
+  ]
 }
