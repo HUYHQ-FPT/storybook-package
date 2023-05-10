@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.scss";
-import Flow from "../../assets/flow.svg";
+import { Button as ButtonAntd, ButtonProps as ButtonPropsAntd } from "antd";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonPropsAntd {
   /**
    * Is this the principal call to action on the page?
    */
@@ -11,10 +11,8 @@ interface ButtonProps {
    * What background color to use
    */
   backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
+  color?: string;
+  size?: "small" | "middle" | "large" | undefined;
   /**
    * Button contents
    */
@@ -27,7 +25,8 @@ interface ButtonProps {
 
 const Button = ({
   primary = false,
-  size = "medium",
+  size = "small",
+  color,
   backgroundColor,
   label,
   ...props
@@ -36,16 +35,15 @@ const Button = ({
     ? "storybook-button--primary"
     : "storybook-button--secondary";
   return (
-    <button
-      type="button"
+    <ButtonAntd
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, color }}
       {...props}
     >
       {label}
-    </button>
+    </ButtonAntd>
   );
 };
 
