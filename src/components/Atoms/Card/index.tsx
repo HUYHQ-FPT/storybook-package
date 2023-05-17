@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "antd/dist/reset.css";
 import { Card as CardAntd, CardProps as CardPropsAntd, TabsProps } from "antd";
 import { CardSize, CardTabListType, CardType } from "antd/es/card/Card";
 interface CardProps extends CardPropsAntd {

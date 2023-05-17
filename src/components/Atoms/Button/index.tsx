@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "antd/dist/reset.css";
 import { Button as ButtonAntd, ButtonProps as ButtonPropsAntd } from "antd";
 
 interface ButtonProps extends ButtonPropsAntd {
