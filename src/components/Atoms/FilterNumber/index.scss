@@ -1,0 +1,47 @@
+.a-filter-number {
+  .ant-collapse-header {
+    padding: 0 !important;
+  }
+
+  .ant-collapse-content-box {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .ant-collapse-expand-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  .ant-btn {
+    color: #59895c;
+    border: 1px solid #59895c;
+  }
+
+  &__line {
+    width: 24px;
+    height: 1px;
+    background-color: #bdbdbd;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
